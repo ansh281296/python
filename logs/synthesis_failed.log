@@ -1,0 +1,36 @@
+##################################################
+# Synopsys Design Compiler - Synthesis Log
+# Tool Version: O-2018.06-SP4
+# Date: 2026-03-26 08:14:02
+# Design: top_alu
+##################################################
+
+Information: Initializing timing library 'slow_1p0v_125c.db'. (UID-21)
+Information: Updating design information... (UID-85)
+Information: Checking design 'top_alu'... (UID-90)
+
+Warning: Port 'scan_enable' is not connected. (LINT-1)
+Warning: Flip-flop 'FF_reg_42' has no set/reset pin. (OPT-150)
+Warning: Net 'int_carry_out' is undriven in design 'top_alu'. (LINT-28)
+Warning: 'compile_ultra' is recommended over 'compile' for better QoR. (OPT-001)
+
+Information: Starting initial compilation pass... (COMP-001)
+Information: Performing logic optimization... (OPT-010)
+Information: Mapping to technology library 'saed32nm_hvt'... (MAP-001)
+
+Error: Cannot find timing path from 'clk' to endpoint 'out_data[7]'. (TIMP-003)
+Error: Hold time violation detected on path: 'FF_reg_10/Q' -> 'FF_reg_11/D'. Slack = -0.42 ns. (TIMP-011)
+Error: Setup time violation detected on path: 'FF_reg_30/Q' -> 'out_data[0]'. Slack = -0.18 ns. (TIMP-012)
+Error: Area constraint not met. Required: 5000 um^2, Achieved: 7843.56 um^2. (AREA-002)
+Error: Design rule violation — max fanout exceeded on net 'global_reset_n' (fanout=128, limit=32). (DRC-006)
+
+Information: Synthesis terminated with errors.
+Information: Total CPU time: 00:04:37
+Information: Total elapsed time: 00:05:12
+Information: Peak memory usage: 1423 MB
+
+##################################################
+# SYNTHESIS RESULT: FAILED
+# Errors   : 5
+# Warnings : 4
+##################################################

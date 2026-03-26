@@ -1,0 +1,42 @@
+##################################################
+# Synopsys Design Compiler - Synthesis Log
+# Tool Version: O-2018.06-SP4
+# Date: 2026-03-26 10:45:19
+# Design: top_fpu
+##################################################
+
+Information: Initializing timing library 'slow_1p0v_125c.db'. (UID-21)
+Information: Updating design information... (UID-85)
+Information: Checking design 'top_fpu'... (UID-90)
+
+Warning: Input port 'test_mode' has no driver. (LINT-1)
+Warning: Clock 'clk_div2' is defined but not used in any timing path. (TIMP-101)
+Warning: 'compile_ultra' recommended — incremental compile skipped. (OPT-001)
+Warning: Net 'unused_wire_3' has no load. (LINT-45)
+Warning: Unconnected output port 'debug_out[3:0]'. (LINT-52)
+
+Information: Starting initial compilation pass... (COMP-001)
+Information: Performing logic optimization... (OPT-010)
+Information: Mapping to technology library 'saed32nm_hvt'... (MAP-001)
+Information: Performing timing optimization... (OPT-020)
+Information: Running design rule fixing... (DRC-001)
+Information: Performing area recovery... (OPT-030)
+
+Information: Final timing report:
+Information:   WNS (Worst Negative Slack) : 0.00 ns  [PASS]
+Information:   TNS (Total Negative Slack) : 0.00 ns  [PASS]
+Information:   WHS (Worst Hold Slack)     : 0.08 ns  [PASS]
+
+Information: Final area report:
+Information:   Cell area : 4812.34 um^2 (constraint: 5000 um^2)  [PASS]
+
+Information: Synthesis completed successfully.
+Information: Total CPU time: 00:06:18
+Information: Total elapsed time: 00:07:02
+Information: Peak memory usage: 1587 MB
+
+##################################################
+# SYNTHESIS RESULT: PASSED
+# Errors   : 0
+# Warnings : 5
+##################################################

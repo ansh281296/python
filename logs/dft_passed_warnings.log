@@ -1,0 +1,45 @@
+##################################################
+# Synopsys DFT Compiler - ATPG / Scan Insertion Log
+# Tool Version: O-2018.06-SP3
+# Date: 2026-03-26 11:30:05
+# Design: top_fpu
+##################################################
+
+Information: Reading in design 'top_fpu.ddc'... (DFT-001)
+Information: Identifying scan candidates... (DFT-010)
+Information: Total flip-flops found: 320
+Information: Scan-eligible flip-flops: 316
+Information: Non-scan flip-flops (excluded): 4
+
+Warning: Flip-flop 'FF_clk_ctrl[0]' cannot be added to scan chain — clock domain crossing detected. (DFT-W030)
+Warning: Flip-flop 'FF_clk_ctrl[1]' cannot be added to scan chain — clock domain crossing detected. (DFT-W030)
+Warning: Cell 'U_mux_scan_4' is redundant after scan insertion; consider removing. (DFT-W055)
+Warning: Test compression ratio lower than expected: achieved 8x, target 16x. (DFT-W072)
+
+Information: Inserting scan chains...
+Information: Stitching scan chain 'chain_0' with 80 cells... [OK]
+Information: Stitching scan chain 'chain_1' with 80 cells... [OK]
+Information: Stitching scan chain 'chain_2' with 80 cells... [OK]
+Information: Stitching scan chain 'chain_3' with 76 cells... [OK]
+
+Information: Running ATPG fault simulation...
+Information: Total stuck-at faults: 1280
+Information: Detected faults      : 1216
+Information: Undetected faults    : 64
+
+Information: Fault coverage: 95.00% [PASS — threshold: 90.00%]
+
+Information: Running transition fault simulation...
+Information: Transition fault coverage: 91.20% [PASS — threshold: 90.00%]
+
+Information: DFT flow completed successfully.
+Information: Total CPU time: 00:03:47
+Information: Total elapsed time: 00:04:15
+
+##################################################
+# DFT RESULT: PASSED
+# Errors   : 0
+# Warnings : 4
+# Stuck-at Fault Coverage  : 95.00% (Required: 90.00%)
+# Transition Fault Coverage: 91.20% (Required: 90.00%)
+##################################################

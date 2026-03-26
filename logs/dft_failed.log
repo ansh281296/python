@@ -1,0 +1,42 @@
+##################################################
+# Synopsys DFT Compiler - ATPG / Scan Insertion Log
+# Tool Version: O-2018.06-SP3
+# Date: 2026-03-26 09:02:44
+# Design: top_alu
+##################################################
+
+Information: Reading in design 'top_alu.ddc'... (DFT-001)
+Information: Identifying scan candidates... (DFT-010)
+Information: Total flip-flops found: 256
+Information: Scan-eligible flip-flops: 248
+Information: Non-scan flip-flops (excluded): 8
+
+Warning: Flip-flop 'FF_ctrl_reg[5]' cannot be added to scan chain — 'dont_touch' attribute set. (DFT-W021)
+Warning: Flip-flop 'FF_ctrl_reg[6]' cannot be added to scan chain — 'dont_touch' attribute set. (DFT-W021)
+
+Information: Inserting scan chains...
+Information: Attempting to stitch scan chain 'chain_0' with 64 cells...
+Information: Attempting to stitch scan chain 'chain_1' with 64 cells...
+Information: Attempting to stitch scan chain 'chain_2' with 64 cells...
+
+Error: Scan chain 'chain_2' has broken connectivity at cell 'U_SDFF_reg_102'. (DFT-E045)
+Error: Incomplete scan path — expected 64 cells, found 61. (DFT-E046)
+Error: DRC check failed: scan_in[2] is floating (no driver found). (DFT-E010)
+
+Information: Running ATPG fault simulation...
+Information: Total stuck-at faults: 1024
+Information: Detected faults      : 788
+Information: Undetected faults    : 236
+
+Error: Fault coverage 76.95% is below the required threshold of 90.00%. (DFT-E080)
+
+Information: DFT flow terminated with errors.
+Information: Total CPU time: 00:02:53
+Information: Total elapsed time: 00:03:10
+
+##################################################
+# DFT RESULT: FAILED
+# Errors   : 4
+# Warnings : 2
+# Fault Coverage: 76.95% (Required: 90.00%)
+##################################################
